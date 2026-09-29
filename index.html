@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Selection - After 10th Class</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>CareerPath 10th</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#comparison" class="nav-link">Comparison</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Choose Your Future Path</h1>
+                <p class="hero-subtitle">Explore multiple career streams and find the perfect course after your 10th class</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="#comparison" class="btn btn-secondary">Compare Streams</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <i class="fas fa-book"></i>
+                    <p>Intermediate</p>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-tools"></i>
+                    <p>Diploma</p>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-laptop"></i>
+                    <p>ITI</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section id="courses" class="courses">
+        <div class="section-header">
+            <h2>Available Course Streams</h2>
+            <p>Choose from a wide variety of career paths tailored for your interests</p>
+        </div>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Streams</button>
+            <button class="filter-btn" data-filter="academic">Academic</button>
+            <button class="filter-btn" data-filter="technical">Technical</button>
+            <button class="filter-btn" data-filter="vocational">Vocational</button>
+        </div>
+
+        <div class="courses-grid">
+            <!-- Intermediate -->
+            <div class="course-card" data-category="academic">
+                <div class="card-header">
+                    <i class="fas fa-book"></i>
+                    <div class="difficulty-badge">Moderate</div>
+                </div>
+                <h3>Intermediate (Junior College)</h3>
+                <p class="course-subtitle">2-Year Program</p>
+                <ul class="course-details">
+                    <li><i class="fas fa-check"></i> Science (PCM/PCB)</li>
+                    <li><i class="fas fa-check"></i> Commerce</li>
+                    <li><i class="fas fa-check"></i> Arts</li>
+                    <li><i class="fas fa-check"></i> Gateway to Higher Studies</li>
+                </ul>
+                <div class="course-info">
+                    <span class="duration"><i class="fas fa-clock"></i> 2 Years</span>
+                    <span class="jobs"><i class="fas fa-briefcase"></i> 5000+</span>
+                </div>
+                <button class="btn btn-small" onclick="showDetails('intermediate')">View Details</button>
+            </div>
+
+            <!-- Diploma -->
+            <div class="course-card" data-category="technical">
+                <div class="card-header">
+                    <i class="fas fa-tools"></i>
+                    <div class="difficulty-badge">Practical</div>
+                </div>
+                <h3>Diploma in Engineering</h3>
+                <p class="course-subtitle">3-Year Program</p>
+                <ul class="course-details">
+                    <li><i class="fas fa-check"></i> Civil, Mechanical, Electrical</li>
+                    <li><i class="fas fa-check"></i> Electronics & IT</li>
+                    <li><i class="fas fa-check"></i> Hands-on Training</li>
+                    <li><i class="fas fa-check"></i> Direct Job Placement</li>
+                </ul>
+                <div class="course-info">
+                    <span class="duration"><i class="fas fa-clock"></i> 3 Years</span>
+                    <span class="jobs"><i class="fas fa-briefcase"></i> 8000+</span>
+                </div>
+                <button class="btn btn-small" onclick="showDetails('diploma')">View Details</button>
+            </div>
+
+            <!-- ITI -->
+            <div class="course-card" data-category="vocational">
+                <div class="card-header">
+                    <i class="fas fa-cog"></i>
+                    <div class="difficulty-badge">Skilled</div>
+                </div>
+                <h3>ITI (Industrial Training)</h3>
+                <p class="course-subtitle">6 Months - 2 Years</p>
+                <ul class="course-details">
+                    <li><i class="fas fa-check"></i> 130+ Trade Options</li>
+                    <li><i class="fas fa-check"></i> Electrician, Plumber, Welder</li>
+                    <li><i class="fas fa-check"></i> Quick Job Entry</li>
+                    <li><i class="fas fa-check"></i> Government Recognized</li>
+                </ul>
+                <div class="course-info">
+                    <span class="duration"><i class="fas fa-clock"></i> 6M-2Y</span>
+                    <span class="jobs"><i class="fas fa-briefcase"></i> 6000+</span>
+                </div>
+                <button class="btn btn-small" onclick="showDetails('iti')">View Details</button>
+            </div>
+
+            <!-- Vocational Course -->
+            <div class="course-card" data-category="vocational">
+                <div class="card-header">
+                    <i class="fas fa-laptop"></i>
+                    <div class="difficulty-badge">Modern</div>
+                </div>
+                <h3>Vocational Courses</h3>
+                <p class="course-subtitle">2-Year Program</p>
+                <ul class="course-details">
+                    <li><i class="fas fa-check"></i> Computer, Banking, Retail</li>
+                    <li><i class="fas fa-check"></i> Healthcare & Beauty</li>
+                    <li><i class="fas fa-check"></i> Practical Skills Focus</li>
+                    <li><i class="fas fa-check"></i> Industry Partnership</li>
+                </ul>
+                <div class="course-info">
+                    <span class="duration"><i class="fas fa-clock"></i> 2 Years</span>
+                    <span class="jobs"><i class="fas fa-briefcase"></i> 7000+</span>
+                </div>
+                <button class="btn btn-small" onclick="showDetails('vocational')">View Details</button>
+            </div>
+
+            <!-- Polytechnic -->
+            <div class="course-card" data-category="technical">
+                <div class="card-header">
+                    <i class="fas fa-microchip"></i>
+                    <div class="difficulty-badge">Advanced</div>
+                </div>
+                <h3>Polytechnic</h3>
+                <p class="course-subtitle">3-Year Program</p>
+                <ul class="course-details">
+                    <li><i class="fas fa-check"></i> Engineering Specialization</li>
+                    <li><i class="fas fa-check"></i> Modern Labs & Equipment</li>
+                    <li><i class="fas fa-check"></i> Internship Opportunities</li>
+                    <li><i class="fas fa-check"></i> Lateral Entry to B.Tech</li>
+                </ul>
+                <div class="course-info">
+                    <span class="duration"><i class="fas fa-clock"></i> 3 Years</span>
+                    <span class="jobs"><i class="fas fa-briefcase"></i> 9000+</span>
+                </div>
+                <button class="btn btn-small" onclick="showDetails('polytechnic')">View Details</button>
+            </div>
+
+            <!-- Professional Courses -->
+            <div class="course-card" data-category="academic">
+                <div class="card-header">
+                    <i class="fas fa-stethoscope"></i>
+                    <div class="difficulty-badge">Specialized</div>
+                </div>
+                <h3>Professional Courses</h3>
+                <p class="course-subtitle">Competitive Programs</p>
+                <ul class="course-details">
+                    <li><i class="fas fa-check"></i> Medicine, Nursing, Pharmacy</li>
+                    <li><i class="fas fa-check"></i> Law, Engineering Entrance</li>
+                    <li><i class="fas fa-check"></i> Competitive Exam Prep</li>
+                    <li><i class="fas fa-check"></i> High Earning Potential</li>
+                </ul>
+                <div class="course-info">
+                    <span class="duration"><i class="fas fa-clock"></i> Variable</span>
+                    <span class="jobs"><i class="fas fa-briefcase"></i> 10000+</span>
+                </div>
+                <button class="btn btn-small" onclick="showDetails('professional')">View Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARISON SECTION -->
+    <section id="comparison" class="comparison">
+        <div class="section-header">
+            <h2>Stream Comparison</h2>
+            <p>Compare different streams to make an informed decision</p>
+        </div>
+
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Intermediate</th>
+                        <th>Diploma</th>
+                        <th>ITI</th>
+                        <th>Vocational</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Duration</strong></td>
+                        <td>2 Years</td>
+                        <td>3 Years</td>
+                        <td>6M - 2Y</td>
+                        <td>2 Years</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Entry Level</strong></td>
+                        <td>10th Pass</td>
+                        <td>10th Pass</td>
+                        <td>8th/10th Pass</td>
+                        <td>10th Pass</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Theory vs Practice</strong></td>
+                        <td>80% Theory</td>
+                        <td>60% Practical</td>
+                        <td>90% Practical</td>
+                        <td>70% Practical</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Job Entry</strong></td>
+                        <td>After 2 Years</td>
+                        <td>Immediate</td>
+                        <td>Immediate</td>
+                        <td>After 2 Years</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Salary (Entry)</strong></td>
+                        <td>₹15,000-25,000</td>
+                        <td>₹20,000-35,000</td>
+                        <td>₹12,000-20,000</td>
+                        <td>₹15,000-28,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Further Studies</strong></td>
+                        <td>Bachelor's</td>
+                        <td>B.Tech (Lateral)</td>
+                        <td>Limited</td>
+                        <td>Diploma/B.Voc</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Career Growth</strong></td>
+                        <td>High</td>
+                        <td>Very High</td>
+                        <td>Moderate</td>
+                        <td>Good</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- DETAILS MODAL -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Have questions? We're here to help guide your career choice</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Address</h4>
+                    <p>Education Hub, Career Avenue<br>Your City, State 123456</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Phone</h4>
+                    <p>+91-XXXX-XXXX-XX<br>Toll Free: 1800-XXXX-XXXX</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>info@careerpath10th.com<br>support@careerpath10th.com</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Hours</h4>
+                    <p>Mon - Fri: 9AM - 6PM<br>Sat: 10AM - 4PM</p>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <select required>
+                        <option value="">Select Your Interest</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="iti">ITI</option>
+                        <option value="vocational">Vocational</option>
+                        <option value="polytechnic">Polytechnic</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h5>About Us</h5>
+                <p>Helping students choose the right career path after 10th class with comprehensive information and guidance.</p>
+            </div>
+            <div class="footer-section">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h5>Follow Us</h5>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CareerPath 10th. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
